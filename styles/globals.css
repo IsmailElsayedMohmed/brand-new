@@ -1,0 +1,20 @@
+body {
+  overflow-x: hidden;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .flexs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .btn:focus {
+    outline: none;
+  }
+}

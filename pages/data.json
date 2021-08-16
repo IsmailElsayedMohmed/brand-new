@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image1.jpg",
+        "color":"#fff",
+        "stock":"4"
+    },
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image2.jpg",
+        "color":"#fff",
+        "stock":"4"
+    },
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image3.jpg",
+        "color":"#fff",
+        "stock":"4"
+    },
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image4.jpg",
+        "color":"#fff",
+        "stock":"4"
+    },
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image5.jpg",
+        "color":"#fff",
+        "stock":"4"
+    },
+    {
+        "id": 1,
+        "title": "Mohmed Elsayed",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "/images/image6.jpg",
+        "color":"#fff",
+        "stock":"4"
+    }
+]
