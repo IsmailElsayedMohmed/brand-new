@@ -10,7 +10,7 @@ export default function ProductsPage({ events }) {
     handelProdcuts(events);
     handelAllProdcuts(events);
   };
-  useEffect(getProducts);
+  useEffect(getProducts, [events]);
   return (
     <Layout>
       <Prodcuts prodcuts={currentProdcuts} />

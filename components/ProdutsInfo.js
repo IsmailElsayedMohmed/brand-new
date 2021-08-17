@@ -49,7 +49,7 @@ export default function ProdutsInfo() {
           </div>
         </Link>
       </div>
-      <div className="relative flex ml-28 mt-5 lg:mt-0 lg:ml-20 ">
+      <div className="relative flex sm:ml-32 mt-6 lg:mt-0 lg:ml-20 ">
         <Image1
           width={384}
           height={384}
