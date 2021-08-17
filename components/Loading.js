@@ -9,6 +9,7 @@ export default function Loading(item) {
           src="/images/snakeCircle.gif"
           alit="wait"
           layout="fill"
+          alt=""
           className="text-center text-4xl mx-auto my-2 bg-gray-300 border-4 border-double border-cyan-900 rounded-lg shadow-md"
         />
       )}

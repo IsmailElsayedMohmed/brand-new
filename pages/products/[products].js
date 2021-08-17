@@ -8,9 +8,9 @@ import { useGlobalContext } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import newPrice from "@/components/Price";
+import Image from "next/image";
 import Loading from "@/components/Loading";
 export default function Products({ events }) {
-  console.log(events);
   const [showImage, setShowImage] = useState(events.image[0].url);
   const [color, setColor] = useState(events.colors[0]);
   const [calc, setCalc] = useState(1);
@@ -21,7 +21,7 @@ export default function Products({ events }) {
       <div className="h-36 bg-cyan-200 my-12 flex items-center">
         <div className="container ">
           <p className="font-bold text-xl text-cyan-900">
-            Home{" "}
+            Home
             <Link href="/products">
               <a className="text-2xl text-cyan-600">/ Prodcuts</a>
             </Link>
@@ -33,53 +33,75 @@ export default function Products({ events }) {
       ) : (
         <div className="container my-4 grid lg:grid-cols-2 gap-4 ">
           <div className="flexs flex-col ">
-            <div className="mb-4 w-full">
-              <img
+            <div className="border-4 p-2 my-4  border-cyan-200 rounded-lg bg-cyan-100 text-center ">
+              <Image
                 src={showImage}
                 onClick={() => setShowImage(events.image[0].url)}
                 alt=""
-                className={`object-cover rounded-lg  mx-auto shadow-lg ${
-                  showImage === events.image[0].url &&
-                  "ring-2 border-2 ring-cyan-300"
-                }  border-cyan-500`}
-                style={{ height: "500px", width: "80%" }}
+                width={"800"}
+                height={"800"}
+                className="avatar"
               />
+              <style jsx global>{`
+                .avatar {
+                  padding: 0;
+                  border-radius: 15px;
+                  margin: 0;
+                }
+              `}</style>
             </div>
             <div className="grid grid-cols-5 gap-5">
-              <div>
-                <img
+              <div
+                className={`${
+                  showImage === events.image[0].url &&
+                  "border-2 border-cyan-400"
+                } shadow-lg px-1 pt-1 rounded-lg  border-cyan-500 bg-cyan-100  object-cover cursor-pointer`}
+              >
+                <Image
                   src={events.image[0].url}
                   onClick={() => setShowImage(events.image[0].url)}
                   alt=""
-                  className={`${
-                    showImage === events.image[0].url &&
-                    "border-2 border-cyan-400"
-                  } shadow-lg rounded-lg  border-cyan-500 h-36 w-full object-cover cursor-pointer`}
+                  width={200}
+                  height={200}
+                  className={"image"}
                 />
+                <style jsx global>{`
+                  .image {
+                    padding: 0;
+                    border-radius: 8px;
+                    margin: 0;
+                  }
+                `}</style>
               </div>
               {events.imageColor.map((e) => {
                 return (
-                  <div key={e.id} className="w-full">
-                    <img
+                  <div
+                    key={e.id}
+                    className={`shadow-lg  px-1 pt-1 rounded-lg  bg-cyan-100 object-cover cursor-pointer ${
+                      showImage === e.url && "border-2 border-cyan-400"
+                    }`}
+                  >
+                    <Image
                       onClick={() => setShowImage(e.url)}
                       src={e.url}
                       alt=""
-                      className={`shadow-lg rounded-lg h-36  w-full object-cover cursor-pointer ${
-                        showImage === e.url && "border-2 border-cyan-400"
-                      }`}
+                      width={200}
+                      height={200}
+                      className={"image"}
                     />
+                    <style jsx global>{`
+                      .image {
+                        padding: 0;
+                        border-radius: 8px;
+                        margin: 0;
+                      }
+                    `}</style>
                   </div>
                 );
               })}
             </div>
           </div>
-          <div className="flex relative flex-col border-2 bg-emerald-100 overflow-hidden border-cyan-300 p-8 rounded-3xl shadow-lg">
-            <img src="/images/wave.svg" alt="" className="absolute inset-0 " />
-            <img
-              src="/images/wave.svg"
-              alt=""
-              className="absolute bottom-0 transform rotate-180 left-0 "
-            />
+          <div className="flex relative flex-col border-2 bg-cyan-50 overflow-hidden border-cyan-300 p-8 rounded-3xl shadow-lg">
             <h1 className="font-bold text-cyan-900 text-4xl tracking-wider z-10	italic ">
               {events.title}
             </h1>
@@ -152,7 +174,7 @@ export default function Products({ events }) {
               }}
               className="btn  z-10 my-5 py-1 font-bold w-36 hover:bg-cyan-400 ring-4 ring-cyan-200 px-4 bg-cyan-300 shadow-lg text-cyan-900"
             >
-              ADD TO CART{" "}
+              ADD TO CART
             </button>
           </div>
         </div>

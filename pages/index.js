@@ -9,10 +9,11 @@ import { useGlobalContext } from "@/context/AuthContext";
 
 export default function Home({ events }) {
   const { AllProdcuts, handelProdcuts, handelAllProdcuts } = useGlobalContext();
-  useEffect(() => {
+  const getProducts = () => {
     handelProdcuts(events);
     handelAllProdcuts(events);
-  }, []);
+  };
+  useEffect(getProducts);
   return (
     <Layout>
       <ProdutsInfo />

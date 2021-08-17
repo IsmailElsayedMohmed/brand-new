@@ -56,7 +56,7 @@ export default function LoginPage() {
             Login
           </button>
           <p className="text-cyan-900  py-2">
-            Don't Have An Account ?{" "}
+            {"Don't"} Have An Account ?{" "}
             <Link href="/register">
               <a className="text-cyan-900 font-bold text-lg">Register</a>
             </Link>

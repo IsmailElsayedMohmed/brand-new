@@ -17,7 +17,7 @@ export default function ProdutsInfo() {
           <Link href="/about">
             <a className="font-bold text-cyan-700 mx-2 underline">About.</a>
           </Link>
-          ... by the end of the day we hobe you like this website and don't
+          ... by the end of the day we hobe you like this website and {"don't"}
           forget to tell us your opnion so we can put it in the
           <a
             href="#opninios"
@@ -41,7 +41,7 @@ export default function ProdutsInfo() {
             قسم الاراء
           </a>
         </p>
-        <Link href="/products">
+        <Link href={"/products"} passHref>
           <div className="text-center    lg:text-left">
             <button className="btn    hover:bg-cyan-700 text-white transition-all font-bold px-4 py-1 bg-cyan-600 border-2 rounded-lg shadow-lg border-cyan-400">
               Shop Now
@@ -53,6 +53,7 @@ export default function ProdutsInfo() {
         <Image1
           width={384}
           height={384}
+          alt=""
           src="/images/MainPageIcon.png"
           className="shadow-2xl  z-10 rounded-lg  "
         />

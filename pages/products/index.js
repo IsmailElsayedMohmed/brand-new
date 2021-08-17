@@ -6,10 +6,11 @@ import { useEffect } from "react";
 export default function ProductsPage({ events }) {
   const { currentProdcuts, handelProdcuts, handelAllProdcuts } =
     useGlobalContext();
-  useEffect(() => {
+  const getProducts = () => {
     handelProdcuts(events);
     handelAllProdcuts(events);
-  }, []);
+  };
+  useEffect(getProducts);
   return (
     <Layout>
       <Prodcuts prodcuts={currentProdcuts} />

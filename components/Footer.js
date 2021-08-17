@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="flexs text-cyan-900 font-bold text-xl italic w-full bg-cyan-100 py-10 border-t-4 mt-12  relative">
       <div className="text-center z-10  ">
         Copy Right &copy; Served and <br /> Made By
-        <span className="text-cyan-600">Mohmed Elsayed's Team</span>
+        <span className="text-cyan-600">Mohmed {"Elsayed's"} Team</span>
       </div>
       <ul className="flexs  -ml-3 text-2xl z-10 -mt-8">
         <Link href="https://www.facebook.com/BASITABRANDS">

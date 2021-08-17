@@ -49,6 +49,12 @@ export const AuthProvider = ({ children }) => {
       return;
     }
     const newItems = item.filter((e) => e.id !== id);
+    localStorage.setItem(
+      "item",
+      JSON.stringify(
+        JSON.parse(localStorage.getItem("item")).filter((e) => e.id !== id)
+      )
+    );
     setItem(newItems);
   };
   const handelSearch = (query) => {

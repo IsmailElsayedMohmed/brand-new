@@ -13,7 +13,7 @@ export default function CartPage({ token }) {
   const { item, delteProdcutInCart, user, sendCartToDashboard } =
     useGlobalContext();
   const uniqe = _.uniqBy(item, "id");
-  const totalInput = (params) => {
+  const totalInput = () => {
     return uniqe.reduce((acumlator, inital) => {
       return acumlator + inital.price * inital.calc;
     }, 0);
@@ -79,7 +79,7 @@ export default function CartPage({ token }) {
           })}
       </div>
       {item.length === 0 && (
-        <div className="text-center py-2  font-bold bg-emerald-100 text-emerald-900">
+        <div className="text-center py-2  font-bold  text-emerald-900">
           Fill The Cart From{" "}
           <Link href="/products">
             <a className="font-bold text-xl font-serif underline text-emerald-900">
@@ -90,16 +90,16 @@ export default function CartPage({ token }) {
       )}
       {item.length !== 0 && (
         <>
-          <div className="flex items-center justify-between gap-4 mx-10 my-4">
+          <div className="gap-4 mx-10 my-4">
             <Link href="/products">
-              <button className="flexs btn py-2 w-full text-cyan-900 italic font-bold hover:bg-cyan-300 transition-all  ring-2 ring-cyan-600  bg-cyan-200">
+              <a className="flexs btn my-4  text-center bg-cyan-300 hover:bg-cyan-400 transition-all text-cyan-900 ring-2 ring-cyan-400 font-bold cursor-pointer w-1/2 mx-auto py-2">
                 <RiArrowGoBackLine className="text-2xl  mx-2" />
                 Back to Prodcuts
-              </button>
+              </a>
             </Link>
             <button
               onClick={() => delteProdcutInCart("all")}
-              className="btn flexs py-2  w-full text-cyan-900 italic font-bold hover:bg-cyan-300 transition-all  ring-2 ring-cyan-600  bg-cyan-200"
+              className="flexs btn text-center bg-cyan-300 hover:bg-cyan-400 transition-all text-cyan-900 ring-2 ring-cyan-400 font-bold cursor-pointer w-1/2 mx-auto mb-2 py-2"
             >
               Delte All Your Cart
               <RiDeleteBin5Line className="text-2xl text-cyan-700 mx-2" />
